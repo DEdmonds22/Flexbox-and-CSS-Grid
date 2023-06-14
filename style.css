@@ -71,6 +71,6 @@ nav div {
 }
             /* The div elements have became flex items, so they no longer behave as block elements - their width has collapsed to what's neccessary for their content and they are willing to sit side-by-side other element (like inline elements) */
 
-nav > div:last-child {
-    margin-left: auto;
+nav > div:last-child {  /* selects the last child in the nav element, ie LOG*/
+    margin-left: auto;  /* aligns <div>LOG</div> on the right*/
 }
