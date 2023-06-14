@@ -21,3 +21,56 @@ body {
                 display: flex;
             }
         /* The code above makes all <section> elements flex container and all direct children become flex items */
+
+    /* Your First Flexbox */
+            /* By default nav & div elements are block elements. */
+            /* Which element do we need to make the flex container? */
+nav {
+    display: flex;  /* nav display is no longer block, it's flex. */
+    height: 50px;   /* sets height of nav bar to 50px */
+    background-color: #a2cbb6;  /* set bg color of nav bar to #a2cbb6 */
+    flex-direction: row;    /* default value, doesn't need to be set if default value */
+    justify-content: flex-start;    /* default value, doesn't need to be set if default value */
+}
+            /* nav is now a flex container, and it's direct children (div) are now flex items, which are laid out in a row horizontally, the default layout of a flex container. */
+            /* A flex container has a flex-direction property that defines the direction of its main axis. There are four values: 
+                + row - the default; left to right in ltr; right to left in rtl
+                + row-reverse -  right to left in ltr; left to right in rtl
+                + column - same as row but top to bottom
+                + column-reverse - same as row-reverse but bottom to top */
+            /* A flex container has a main axis and a cross axis (represents the opposite direction of it's main axis). For example: 
+                + If flex-direction: row; the: 
+                    * main axis is horizontal
+                    * cross axis is vertical
+                + If flex-direction: column; the: 
+                    * main axis is vertical
+                    * cross-axis is horizontal */
+            /* The concepts of main axis 7 cross axis come into play when it comes to sizing and layout properties, such as: 
+                + justify-content: Controls alignment for the main axis
+                    * flex-start - default
+                    * flex-end
+                    * start
+                    * end
+                    * left
+                    * right
+                    * center
+                    * space-between
+                    * space-around
+                    * space-evenly
+                + align-items: Controls alignment for the cross axis 
+                    * stretch - default
+                    * flex-start / start / self-start
+                    * flex-end / end / self-end
+                    * center
+                    * baseline */
+
+nav div {
+    font-size: 20px;    /* sets font size of divs to 20px */
+    margin: 10px;   /* sets margin around each indiviual div to 10px */
+    color: #f3dba8; /* sets text color of divs to #f3dba8 */
+}
+            /* The div elements have became flex items, so they no longer behave as block elements - their width has collapsed to what's neccessary for their content and they are willing to sit side-by-side other element (like inline elements) */
+
+nav > div:last-child {
+    margin-left: auto;
+}
