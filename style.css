@@ -74,3 +74,8 @@ nav div {
 nav > div:last-child {  /* selects the last child in the nav element, ie LOG*/
     margin-left: auto;  /* aligns <div>LOG</div> on the right*/
 }
+
+/* CSS */
+    /* Why use CSS Grid? */
+        /* CSS Grid is a great option when you have:
+            + Any components that would beneifit from a grid-typ layout such as a "profile card", in other words, CSS Grid doesn;t have to apply to the whole page - it can be useful for laying out smaller "components" as well. */
