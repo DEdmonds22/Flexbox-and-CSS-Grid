@@ -1,0 +1,16 @@
+* {
+    /* height & width now includes border & padding */
+    box-sizing: border-box;
+  }
+  
+body {
+    margin: 0;
+    font-family: Helvetica;
+}
+
+/* FLEXBOX */
+    /* Why Use Flexbox? */
+        /* Flexbox excels at assisting devs w/ the following task: 
+            + Vertically centering content & elements within a container element.
+            + Spacing child elements within a container uniformly.
+            + Making the height of child elements laid out in columns the same even though they have a different amount of content. */
