@@ -14,3 +14,10 @@ body {
             + Vertically centering content & elements within a container element.
             + Spacing child elements within a container uniformly.
             + Making the height of child elements laid out in columns the same even though they have a different amount of content. */
+
+    /* Flexbox Fundamentals */
+        /* We use a CSS display: flex; declaration to make an element a flex container, for example:
+            section {
+                display: flex;
+            }
+        /* The code above makes all <section> elements flex container and all direct children become flex items */
