@@ -87,4 +87,45 @@ nav > div:last-child {  /* selects the last child in the nav element, ie LOG*/
             + Cells - a single section
             + Areas - a x by x section
             + Gaps */
-        /*  */
+    
+    /* Your First CSS Grid */
+body {
+    display: grid;  /* generates a block-level grid */
+    height: 100vh;  /* using height: 100vh; will make the <body> fill the height of the browser window so that the <footer> is at the bottom. */
+    margin: 0;  /* 0 margin around the body element */
+    font-family: Helvetica;
+    grid-template-columns: 1fr 4fr; /* the first column is 1/5 of the available space, while the second column is 4/5 */
+    grid-template-rows: 50px 1fr 30px; /* first row is 50px, second row is 1fr of available space, thrid row is 30px */
+    gap: 5px; /* replaces grid-gap because it's obsolete; specifies width of grid lines */
+}
+        /* A CSS Grid has a single column by default. */
+        /* Each grid item (direct child) is placed on its own row by default. */
+        /* Each grid item gets placed in each cell accross columns from left to right, this is its default behavior. */
+        /* NOTE that the grid gaps cannot be styled - the grid's background simply shows through. */
+
+aside {
+    background-color: #a2b4da;
+}
+
+main {
+    background-color: #f3dba8;
+}
+
+footer {
+    background-color: #a2cbb6;
+}
+
+        /* What if we want to center the text in those elements both horizontal and vertically? We can create a class that will make any element w/ that class a Flexbox: */
+.flex-ctr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav, footer {
+   grid-column: 1/3; /* grid-column determins which grid lines a grid item starts and ends on. The lines are numbered string w/ 1 (not zero).*/
+   grid-row: inherit;
+}
+        /* grid-column: span 2; has the same affect as grid-column: 1/3; */
+        /* grid-column is shorthand for grid-column-start & grid-column-end */
+        /* grid-row is shorthand for grid-row-start & grid-row-end */
